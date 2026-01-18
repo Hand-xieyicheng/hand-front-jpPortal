@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Global transitions and styles */
+body {
+  @apply bg-gray-50 text-gray-800 font-sans antialiased;
+}
+
+/* Page transition effects */
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Global Interaction Feedback */
+/* Ensure all interactive elements show a pointer */
+button, 
+a, 
+[role="button"], 
+input[type="submit"], 
+input[type="button"], 
+input[type="reset"],
+area,
+summary {
+  cursor: pointer;
+}
+
+/* Utility class for manual enforcement */
+.clickable {
+  cursor: pointer !important;
+}
+
+/* Ensure disabled elements show not-allowed */
+button:disabled,
+input:disabled,
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
