@@ -43,3 +43,12 @@ export function getWordsListByLessonId(params) {
     params,
   })
 }
+
+// get article list
+export function getArticleByLessonId(params) {
+  return request({
+    url: '/translate/getArticleByLessonId',
+    method: 'get',
+    params,
+  })
+}
